@@ -1,9 +1,8 @@
 import { AppBar, Button, Grid, Toolbar } from "@mui/material";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import TaskDialog from "./TaskDialog";
 import { useState } from "react";
+import MenuIcon from '@mui/icons-material/Menu';
 
 const Nav = (props) => {
   const [open, setOpen] = useState(false);
@@ -23,7 +22,9 @@ const Nav = (props) => {
               fontSize={"1.25em"}
             >
               <div>
-                <FontAwesomeIcon icon={faBars} />
+                <div style={{paddingTop: "2%"}}>
+                <MenuIcon fontSize="medium" />
+                </div>
                 <span>&nbsp;FRAMEWORK</span>
               </div>
             </Grid>
