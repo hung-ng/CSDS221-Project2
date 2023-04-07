@@ -29,7 +29,7 @@ const TaskDialog = (props) => {
   const [descriptionError, setDescriptionError] = useState(false);
 
   const handleCloseExtra = (event, reason) => {
-    if (reason && reason == "backdropClick") return;
+    if (reason && reason === "backdropClick") return;
     setTitleError(false);
     setDescriptionError(false);
     setTitle("");

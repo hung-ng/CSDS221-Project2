@@ -21,7 +21,7 @@ const Nav = (props) => {
               flexDirection="row-reverse"
               fontSize={"1.25em"}
             >
-              <div>
+              <div style={{display: "flex"}}>
                 <div style={{paddingTop: "2%"}}>
                 <MenuIcon fontSize="medium" />
                 </div>
