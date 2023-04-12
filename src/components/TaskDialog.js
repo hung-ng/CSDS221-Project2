@@ -21,10 +21,10 @@ import dayjs from "dayjs";
 import DoDisturbIcon from "@mui/icons-material/DoDisturb";
 
 const TaskDialog = (props) => {
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [deadline, setDeadline] = useState(dayjs());
-  const [priority, setPriority] = useState("Low");
+  const [title, setTitle] = useState(!props.add ? props.task.title : "");
+  const [description, setDescription] = useState(!props.add ? props.task.description : "");
+  const [deadline, setDeadline] = useState(!props.add ? dayjs(props.task.deadline, "MM/DD/YY") : dayjs());
+  const [priority, setPriority] = useState(!props.add ? props.task.priority : "Low");
   const [titleError, setTitleError] = useState(0);
   const [descriptionError, setDescriptionError] = useState(false);
 
